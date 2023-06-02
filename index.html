@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewery api</title> 
+     
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+     
+</head>   
+
+<body>
+    
+    <div class="modal" >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Error </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p id="modal-msg">Error </p>
+            </div>
+            <div class="modal-footer">
+              <button class = "modal-button" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="full-body">   
+
+            <div class = "header"> 
+
+                    <h1 >BREWERY API</h1> 
+                    <button type="submit" id="getList" onclick="breweryAPI()" >'''CLICK TO GET ALL BREWERY'''</button>
+                
+    <br><br>
+                
+                    <div class="form">
+                        <div class="form-group">
+                            <form action="" id="search-form"> 
+                                
+                                <span id="span-filter">
+                                    <label for="filter">   Find   </label>  
+                                    <span id="filter-select"> 
+                                        <select name="filter-value" id="filterby">
+                                            <option value="name" >NAME</option>
+                                            <option value="type" >TYPE</option>
+                                            <option value="city">City</option>
+                                            <option value="state">STATE</option>
+                                            <option value="number" >PHONE NUMBER </option>
+                                        </select>
+                                        
+                                    </span>                               
+                                </span> 
+    
+                                <span id="span-search">
+                                    <label for="search">Search</label>
+                                    <input type="text" id="search-term" placeholder="FIND BREWERY "  value="" required>  
+                                    <button    type="submit">FIND</button>
+                                </span>
+                        
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+    <br><br>     
+            <div class = "body-header"> 
+                <div class="result-filter">
+                    <div class="form"> 
+                        <div class="form-gorup">
+                            <form action="" id="filter-form">
+                                
+                             
+                                    <select name="" id="drop-type">
+                                        <option value="">SELECTED BY</option>
+                                        <option value="enable" >micro </option>
+                                <option value=" enable">large</option>
+                                        </option>
+                                    </select> 
+                                </span>
+                            <span>
+                                <label for="filter">   Filter :  </label>  
+                                <span id="result-select"> 
+                                    <select name="filter-result" id="resultFilter">
+                                        <option value="name" > NAME</option>
+                                        <option value="brewery_type" >TYPE</option>
+                                        <option value="city">CITY</option>
+                                        <option value="state">STATE</option> 
+                                        <option value="number" >PHONE NUMBER </option>
+                                    </select> 
+                                </span>  
+                                
+                            </span>
+                                <span id="span-result">
+                                    <label for="search">Search:</label>
+                                    <input type="text" id="result-term" placeholder="ENTER HERE..."  value="" required>  
+                                    <button type="submit">FILTER RESULT</button> 
+                                </span>
+                            </form> 
+                           
+                    </div>
+                </div>
+                <div class="result">
+                </div>
+            </div>
+            
+            <div class = "body" id="card-parent">
+            
+        
+            </div>
+           
+            <div class = "footer">    
+                <div>
+                    <p id="showing"></p>
+                </div>       
+                
+                <div class="button-hold">
+                    <nav aria-label="pagination-size" class = "pagination" id="page-btn"> 
+                    
+                    </nav>
+                </div>
+                
+                
+            </div> 
+</div>
+     
+    <script src="script.js"></script>
+</body>
+</html>

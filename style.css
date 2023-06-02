@@ -1,0 +1,66 @@
+.full-body{
+    width: 100%;
+    height : 100%;
+    display: flex; 
+    flex-direction: column;
+    background-color: gold; 
+   text-align: center;
+   padding-left:4rem ;
+}  
+.full-body{
+    width: 100%;
+    height : 70%;
+    display: flex; 
+    flex-direction: column;
+    background-color:aliceblue 
+   
+}
+.header{ 
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: column;
+    width: 95%;
+    height: auto; 
+    align-items: center; 
+    justify-items: center; 
+    background-image: linear-gradient(to bottom right,  rgb(243, 132, 92),rgb(255 251 235)); 
+    box-shadow: 2px 2px orange;
+} 
+
+.card-text{
+    word-wrap:normal; 
+    font-weight: 500; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+.footer{
+    display: flex; 
+    position: fixed; 
+    justify-content: space-between;
+    bottom: 0;
+    width: 95%;
+    height: 5rem;
+    align-items: center; 
+    text-align: center; 
+    background-image: linear-gradient(to top,  rgb(193, 193, 193),rgb(255 251 235)); 
+    border: 1px solid brown; 
+  
+}
+.card{
+    margin: 0.8rem; 
+    padding: 0.5rem; 
+    background-image: linear-gradient( rgb(247, 199, 183), rgb(255 251 235)); 
+    box-shadow: 2px 2px gray;
+  }
+
+#showing{ 
+    padding-left: 0.5rem;
+    font-weight: 600; 
+}
+.pagination button{
+    color: blueviolet;
+    background-color: transparent; 
+    cursor: pointer;  
+    border: 0.5px solid blue;
+    border-radius: 15%;
+} 
